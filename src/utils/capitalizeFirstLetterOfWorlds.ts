@@ -1,4 +1,4 @@
-export const capitalizeFirstLetterOfEachWorlds = (value: string): string => {
+export const capitalizeFirstLetterOfWorlds = (value: string): string => {
   const newValue = value.toLowerCase();
 
   return newValue.replace(/(^\w{1})|(\s+\w{1})/g, (letter) =>

@@ -283,7 +283,7 @@ const Home: React.FC = () => {
             </>
           )}
           <S.ButtonSubmit>
-            <button onClick={()=>handleSubmit()}>Salvar Cliente</button>
+            <button id="qa-submit-button" onClick={()=>handleSubmit()}>Salvar Cliente</button>
           </S.ButtonSubmit>
         </S.ContentBox>
       </S.FormBox>

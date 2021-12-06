@@ -14,4 +14,5 @@ export const color = {
   black: '#000000',
   orange: '#FE0003',
   darkOrange: '#CC000A',
+  red: '#DE3822',
 };

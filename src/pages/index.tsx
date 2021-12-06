@@ -1,3 +1,4 @@
 import Home from './Home';
 import Slider from './Slider'
-export { Home, Slider };
+import Table from './Table'
+export { Home, Slider, Table };

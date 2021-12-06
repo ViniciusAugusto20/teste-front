@@ -32,5 +32,24 @@
       "img": "https://media.istockphoto.com/videos/stay-home-dog-lying-on-couch-indoors-dog-nose-pet-care-animal-life-video-id1224190215?s=640x640",
       "typeOfSlide": "imgTop"
     }
+  ],
+  "clients": [
+    {
+      "id": "c8245e49-2378-4aa5-8f36-dcc79dd020fc",
+      "name": "Carlos Fernandes",
+      "birthday": "2010-10-10",
+      "driver_license": "",
+      "state": "GO",
+      "city": "Goiânia",
+      "responsibleName": "Roberto Paulo",
+      "responsiblePhone": "(62) 91111-1231",
+      "phoneNumbers": [
+        "(62) 6666-55555"
+      ],
+      "emails": [
+        "asdasdasd@dada.com"
+      ],
+      "userIsUnderAge": false
+    }
   ]
 }

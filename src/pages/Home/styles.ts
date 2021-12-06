@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { color } from '../../assets/css/color';
 import { typography } from '../../assets/css/typography';
 import { IoAddCircleOutline, IoRemoveOutline } from 'react-icons/io5';
+import { InputProps } from './types';
 
 export const Title = styled.span`
   font-family: ${typography.type.primary};
@@ -47,7 +48,7 @@ export const ContentBox = styled.div`
   min-width: 200px;
 `;
 
-export const ContainerInput = styled.div`
+export const ContainerInput = styled.div<InputProps>`
   display: flex;
   flex-direction: column;
   align-self: start;
@@ -60,12 +61,16 @@ export const ContainerInput = styled.div`
     font-weight: ${typography.weight.bold};
     font-size: ${typography.size.s3}px;
   }
+
   input {
     margin-right: 10px;
     cursor: pointer;
     display: inline-block;
     height: 40px;
-    border: 1px solid ${color.mediumLightGray};
+    border: ${({ hasError }) =>
+      hasError
+        ? `1px solid ${color.red}`
+        : `1px solid ${color.mediumLightGray}`};
     background: ${color.white};
     appearance: none;
     outline: none;
@@ -80,20 +85,22 @@ export const ContainerInput = styled.div`
   }
 `;
 
-export const Select = styled.select`
+export const Select = styled.select<InputProps>`
   cursor: pointer;
   display: inline-block;
   height: 40px;
-  border: 1px solid ${color.mediumLightGray};
+  margin-right: 10px;
+  border: ${({ hasError }) =>
+    hasError ? `1px solid ${color.red}` : `1px solid ${color.mediumLightGray}`};
   background: ${color.white};
   appearance: none;
   outline: none;
   border-radius: 5px;
   -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-left: 20px;
-  option {   
+  -moz-appearance: none;
+  appearance: none;
+  padding-left: 20px;
+  option {
     font-family: ${typography.type.primary};
     font-weight: ${typography.weight.regular};
     font-size: ${typography.size.s2}px;
@@ -111,4 +118,35 @@ export const ContainerMultipleInputs = styled.div`
     align-items: center;
     margin-top: 10px;
   }
+`;
+
+export const ButtonSubmit = styled.div`
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 150px;
+    height: 40px;
+    color: ${color.white};
+    background-color: ${color.mediumGreen};
+    border: 1px solid ${color.mediumLightGray};
+    font-family: ${typography.type.primary};
+    font-weight: ${typography.weight.regular};
+    font-size: ${typography.size.s2}px;
+    border-radius: 5px;
+    cursor: pointer;
+    :hover {
+      opacity: 0.9;
+    }
+  }
+`;
+
+export const ContainerError = styled.div`
+  margin-top: 5px;
+  color: ${color.red};
+  font-family: ${typography.type.primary};
+  font-weight: ${typography.weight.regular};
+  font-size: ${typography.size.s0}px;
 `;

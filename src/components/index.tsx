@@ -1,3 +1,4 @@
-import { Slide } from "./molecules";
+import { Slide, ToastContainer } from './molecules';
+import { Toast } from './atoms';
 
-export{Slide}
+export { Slide, ToastContainer, Toast };

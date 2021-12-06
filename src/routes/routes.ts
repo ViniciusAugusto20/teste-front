@@ -1,4 +1,4 @@
-import { Home, Slider } from '../pages';
+import { Home, Slider, Table } from '../pages';
 
 const routes = [
   {
@@ -11,6 +11,11 @@ const routes = [
     name: 'Slider',
     component: Slider,
   },
+  {
+    path: '/clients',
+    name: 'Table',
+    component: Table,
+  }, 
 ];
 
 export default routes;
